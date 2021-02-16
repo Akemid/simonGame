@@ -18,7 +18,7 @@ body {
 }
 
 .btn {
-  margin: 25px;
+  margin: 25px; 
   display: inline-block;
   height: 200px;
   width: 200px;
@@ -50,4 +50,21 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+@media (max-width:520px){
+  .container {
+    display: block;
+    width: 100%;
+    margin: auto;
+  
+  }
+  .btn {
+    
+    height: 100px;
+    width: 100px;
+  }
+  #level-title {
+    font-size: 2.5rem;
+  }
 }
