@@ -110,10 +110,11 @@ function checkAnswer(currentLevel) {
     }
 
 
-    //
+  
+}
+  //
     function startOver() {
         userClickedPattern = [];
         gamePattern = [];
         level = 0;
     }
-}
