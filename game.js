@@ -2,12 +2,21 @@ var userClickedPattern = [];
 var gamePattern = [];
 var buttonColours = ["red", "blue", "green", "yellow"];
 var level = 0;
-$(document).keydown(function () {
-    if (level === 0) {
-        nextSequence();
-        $("h1").text("Level 0")
-    }
-});
+// $(document).keydown(function () {
+//     if (level === 0) {
+//         nextSequence();
+//         $("h1").text("Level 0")
+//     }
+// });
+$("#btnStart").click(function(){
+  var idButton = this.id;
+  if (level === 0) {
+          nextSequence();
+          $("h1").text("Level 0")
+      }
+  ;
+  animatePress(idButton);
+})
 
 function nextSequence() {
 
@@ -65,26 +74,7 @@ function animatePress(currentColour) {
     }, 100)
 }
 
-// //check anwser
 
-// function checkAnswer(currentLevel) {
-//     var correcto = true;
-//     for (var i = 0; i < currentLevel; i++) {
-//         if (gamePattern[i] !== userClickedPattern[i]) {
-//             correcto = false;
-//         }
-//     }
-//     if (correcto) {
-//         console.log("Success");
-//         $("h1").text("Level " + level);
-//         setTimeout(function () {
-//             nextSequence();
-//         }, 1000);
-//         userClickedPattern = [];
-//     }
-//     else {
-//         console.log("fail");
-//     }}
 
 //1. Create a new function called checkAnswer(), it should take one input with the name currentLevel
 function checkAnswer(currentLevel) {
