@@ -64,8 +64,7 @@ body {
 }
 
 .modal {
-  display: block;
-  margin: auto;
+  display: none;
   /* display: inline-block; */
   height: 120px;
   width: 600px;
@@ -75,6 +74,21 @@ body {
   font-family: 'Press Start 2P', cursive;
   font-size: 1rem;
   padding:20px 0;
+  position: absolute;
+  top: 300px;
+  left: 400px; 
+  z-index: 200;
+  opacity: 1;
+}
+.back-modal{
+  display: none;
+  background-color: cornsilk;
+  opacity: 0.7;
+  width: 200vh;
+  height: 180vh;
+  z-index: 100;
+  position: absolute;
+  top:0;
 }
 .btn-close{
   display: block;

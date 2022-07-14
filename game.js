@@ -10,6 +10,8 @@ var level = 0;
 // });
 
 $("#btnStart").click(function(){
+    let modal = document.getElementById("modal");
+    modal.style.display="none";
   var idButton = this.id;
   // if (level === 0) {
           nextSequence();
@@ -118,13 +120,15 @@ function checkAnswer(currentLevel) {
         userClickedPattern = [];
         gamePattern = [];
         level = 0;
-        // let modal = document.getElementById("modal");
-        // modal.style.display="block";
+        let modal = document.getElementById("modal");
+        modal.style.display="block";
     }
 
 
     function onClose(){
         let modal = document.getElementById("modal");
         modal.style.display="none";
+        let back = document.getElementsByClassName("back-modal")[0];
+        back.style.display="none";
     }
 
