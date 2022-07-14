@@ -8,6 +8,7 @@ var level = 0;
 //         $("h1").text("Level 0")
 //     }
 // });
+
 $("#btnStart").click(function(){
   var idButton = this.id;
   // if (level === 0) {
@@ -117,4 +118,13 @@ function checkAnswer(currentLevel) {
         userClickedPattern = [];
         gamePattern = [];
         level = 0;
+        // let modal = document.getElementById("modal");
+        // modal.style.display="block";
     }
+
+
+    function onClose(){
+        let modal = document.getElementById("modal");
+        modal.style.display="none";
+    }
+
